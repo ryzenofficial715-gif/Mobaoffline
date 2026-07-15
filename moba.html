@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>⚔️ MOBA Offline 5v5</title>
+    <link rel="stylesheet" href="moba.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loading-bar">
+            <div class="loading-fill"></div>
+        </div>
+        <p>Loading MOBA...</p>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Minimap -->
+        <canvas id="minimap"></canvas>
+        
+        <!-- Top UI -->
+        <div id="top-ui">
+            <div id="gold-display">💰 500</div>
+            <div id="score-display">🏆 0 - 0</div>
+            <div id="timer-display">⏱️ 15:00</div>
+        </div>
+        
+        <!-- Kill Feed -->
+        <div id="kill-feed"></div>
+        
+        <!-- Shop Panel -->
+        <div id="shop-panel">
+            <h3>🛒 SHOP</h3>
+            <div class="shop-items">
+                <button class="shop-item" data-item="sword">
+                    ⚔️ Sword (+50 ATK)<br>💰 300
+                </button>
+                <button class="shop-item" data-item="armor">
+                    🛡️ Armor (+500 HP)<br>💰 400
+                </button>
+                <button class="shop-item" data-item="boots">
+                    👢 Boots (+2 SPD)<br>💰 250
+                </button>
+                <button class="shop-item" data-item="crit">
+                    💎 Crit Gem (+Crit)<br>💰 600
+                </button>
+                <button class="shop-item" data-item="lifesteal">
+                    🩸 Lifesteal<br>💰 500
+                </button>
+                <button class="shop-item" data-item="ultimate">
+                    🔥 Ultimate Upgrade<br>💰 1000
+                </button>
+            </div>
+            <button id="close-shop">❌ Close</button>
+        </div>
+        
+        <!-- Hero Info -->
+        <div id="hero-info">
+            <div id="selected-hero-name"></div>
+            <div id="selected-hero-hp"></div>
+            <div id="selected-hero-stats"></div>
+        </div>
+        
+        <!-- Controls -->
+        <div id="controls">
+            <!-- Joystick Area -->
+            <div id="joystick-container">
+                <div id="joystick-base">
+                    <div id="joystick-thumb"></div>
+                </div>
+            </div>
+            
+            <!-- Skill Buttons -->
+            <div id="skills">
+                <button class="skill-btn" id="skill-atk">
+                    ⚔️<br>ATK
+                </button>
+                <button class="skill-btn" id="skill1">
+                    💥<br>Skill1
+                    <span class="cooldown"></span>
+                </button>
+                <button class="skill-btn" id="skill2">
+                    🛡️<br>Skill2
+                    <span class="cooldown"></span>
+                </button>
+                <button class="skill-btn ult-btn" id="skill-ult">
+                    🔥<br>ULT
+                    <span class="cooldown"></span>
+                </button>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div id="actions">
+                <button id="btn-recall">🏠<br>Recall</button>
+                <button id="btn-shop">🛒<br>Shop</button>
+                <button id="btn-ping">📍<br>Ping</button>
+            </div>
+        </div>
+        
+        <!-- Game Over -->
+        <div id="game-over">
+            <h1 id="result-text"></h1>
+            <button id="btn-restart">🔄 Play Again</button>
+        </div>
+    </div>
+
+    <script src="moba.js"></script>
+</body>
+              </html>
